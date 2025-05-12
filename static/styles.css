@@ -1,0 +1,90 @@
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Menempatkan canvas di belakang semua elemen lainnya */
+    object-fit: cover; 
+    pointer-events: none;
+}
+/* Pastikan halaman penuh dengan background item hitam */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start; /* Agar form ada di kiri */
+    align-items: flex-start;    /* Agar form berada di bagian atas */
+    background-color: rgb(0, 0, 0);    /* Set background hitam */
+    color: white;               /* Teks berwarna putih supaya jelas */
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+}
+form {
+position: relative;
+padding: 20px;
+width: 90%;             /* Gunakan persen, bukan px */
+max-width: 500px;       /* Biar gak terlalu lebar di desktop */
+box-sizing: border-box; /* Hindarin overflow */
+}
+/* Styling header dan form */
+h2 {
+    margin-top: 0;          /* Jarak antara header dan form */
+    margin-bottom: 20px;
+}
+
+/* Styling pertanyaan, tanpa box */
+p {
+    margin: 15px 0;
+    font-size: 18px;           /* Membuat font pertanyaan agak besar agar jelas */
+    line-height: 1.6;
+}
+
+/* Styling radio buttons dan labels */
+label {
+    margin: 5px 0;
+    font-size: 16px;
+    display: inline-block;    /* Biar labelnya fleksibel secara horizontal */
+    white-space: normal;      /* Memungkinkan teks untuk wrap ke baris berikutnya */
+    width: auto;              /* Supaya nggak ada batasan lebar */
+    word-wrap: break-word;    /* Agar kata-kata panjang bisa dipotong dan lanjut ke baris baru */
+}
+
+/* Styling button */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  /* Mengurangi ukuran form atau mengatur lebar form */
+  form {
+    max-width: 90%; /* Lebar form menjadi lebih kecil di mobile */
+    padding: 10px;
+  }
+}
